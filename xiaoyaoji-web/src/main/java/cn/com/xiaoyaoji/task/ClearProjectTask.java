@@ -46,5 +46,6 @@ public class ClearProjectTask implements Runnable {
             DocService.instance().deleteDocHistoryThanNum(15, docId);
             logger.info("清除{}", docId);
         }
+        logger.info("清除dochistory计划执行完成");
     }
 }
