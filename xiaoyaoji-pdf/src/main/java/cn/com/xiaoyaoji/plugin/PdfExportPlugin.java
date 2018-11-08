@@ -239,7 +239,7 @@ public class PdfExportPlugin extends DocExportPlugin {
                 title = printThirdpart(order, parent, doc);
                 break;
             default:
-                break;
+                return;
         }
         List<Doc> children = doc.getChildren();
         for (int i = 0; i < children.size(); i++) {
