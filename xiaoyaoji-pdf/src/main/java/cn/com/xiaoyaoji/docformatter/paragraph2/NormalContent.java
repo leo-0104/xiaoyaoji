@@ -131,11 +131,7 @@ public class NormalContent extends Paragraph {
             return;
         }
         try {
-            content = content.replace("<br></br>", "<br>");
-            content = content.replace("</br>", "<br>");
-            content = content.replace("<br>", "<br></br>");
-            content = content.replace("<br/>", "<br></br>");
-            ElementList list = parseToElementList(content);
+            ElementList list = parseToElementList(Html2XhtmlConverter.convert(content));
             for (Element element : list) {
                 add(element);
             }
