@@ -35,7 +35,7 @@ define(['vue', 'veeValidate'], function (Vue, VeeValidate) {
                         return '请输入'+messages.getMessage(name);
                     },
                     email:function(){
-                        return '邮箱输入错误，正确格式为：abc@domain.com';
+                        return '邮箱输入错误，正确格式为：name@huya.com';
                     }
                 }
             }

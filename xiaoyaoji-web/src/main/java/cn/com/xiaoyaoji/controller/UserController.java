@@ -25,6 +25,8 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.IOException;
 import java.util.Date;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * @author zhoujingjie
@@ -60,7 +62,13 @@ public class UserController {
     @Ignore
     @PostMapping("register")
     public Object create(cn.com.xiaoyaoji.service.domain.User user) {
+        String email = user.getEmail().trim();
+        //验证虎牙邮箱
+        String repegex = "^[a-zA-Z0-9]+@huya.com$";
+        Pattern pattern = Pattern.compile(repegex);
+        Matcher matcher = pattern.matcher(email);
         user.setEmail(user.getEmail().trim());
+        AssertUtils.isTrue(matcher.matches(),"请输入正确的虎牙邮箱(name@huya.com)");
         AssertUtils.isTrue(StringUtils.isEmail(user.getEmail()), "请输入有效的邮箱");
         AssertUtils.notNull(user.getPassword(), "请输入密码");
         AssertUtils.notNull(user.getEmail(), "请输入邮箱");
@@ -157,6 +165,11 @@ public class UserController {
     public Object sendEmailCaptcha(@RequestParam String email, @CookieValue(Constants.TOKEN_COOKIE_NAME)String token) {
         String code = StringUtils.code();
         AssertUtils.notNull(email, "邮箱为空");
+        //验证虎牙邮箱
+        String repegex = "^[a-zA-Z0-9]+@huya.com$";
+        Pattern pattern = Pattern.compile(repegex);
+        Matcher matcher = pattern.matcher(email);
+        AssertUtils.isTrue(matcher.matches(),"请输入正确的虎牙邮箱(name@huya.com)");
         AssertUtils.isTrue(StringUtils.isEmail(email), "邮箱格式错误");
         EMailUtils.sendCaptcha(code, email);
         CacheUtils.put(token, "emailCaptcha", code);
