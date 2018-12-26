@@ -71,6 +71,11 @@
             <groupId>cn.com.xiaoyaoji</groupId>
             <artifactId>xiaoyaoji-biz</artifactId>
         </dependency>
+        <dependency>
+            <groupId>cn.com.xiaoyaoji</groupId>
+            <artifactId>xiaoyaoji-plugins</artifactId>
+            <version>2.1.7</version>
+        </dependency>
     </dependencies>
 
     <profiles>
