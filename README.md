@@ -50,6 +50,4 @@
 
 
 
-## 如果觉得还不错，请作者喝杯咖啡吧 ☺
-![二维码](http://f1.xiaoyaoji.cn/donate.webp)
 
