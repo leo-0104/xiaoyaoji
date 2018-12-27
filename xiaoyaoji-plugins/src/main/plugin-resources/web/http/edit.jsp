@@ -228,6 +228,9 @@
                             <button class="btn btn-default btn-sm" v-on:click="importJSON('responseArgs')">
                                 <i class="iconfont icon-importexport"></i>导入json
                             </button>
+                            <button class="btn btn-default btn-sm" v-on:click="importParamsJSON('responseArgs')">
+                                   导入描述
+                            </button>
                         </div>
                     </div>
                     <ul uk-tab>

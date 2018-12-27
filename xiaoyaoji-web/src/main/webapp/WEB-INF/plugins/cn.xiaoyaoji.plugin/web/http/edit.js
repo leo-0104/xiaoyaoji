@@ -16,7 +16,9 @@
                 responseArgs:[],
                 import:null,
                 importValue:null,
+                importDescValue:null,
                 importModal:false,
+                importDescModal:false,
                 currentEnv:null,
                 urlArgs:[],
                 flag:{
@@ -149,6 +151,10 @@
                     this.importModal = true;
                     this.import = type;
                  },
+                importDesc:function(type){
+                    this.importDescModal = true;
+                    this.import = type;
+                },
                 importOk:function(){
                     if (!this.importValue) {
                         toastr.error('导入内容为空');
@@ -158,6 +164,37 @@
                     var data = null;
                     try {
                         data = utils.toJSON(this.importValue)
+                    } catch (e) {
+                        alert('JSON格式有误');
+                        return;
+                    }
+                    var temp = [];
+                    commons.parseImportData(data, temp);
+                    var self = this;
+                    temp.forEach(function (d) {
+                        if(self.import ==='requestHeaders'){
+                            self.content.requestHeaders.push(d);
+                        }else if(self.import ==='requestArgs'){
+                            self.content.requestArgs.push(d);
+                        }else if(self.import ==='responseHeaders'){
+                            self.content.responseHeaders.push(d);
+                        }else if(self.import ==='responseArgs'){
+                            self.content.responseArgs.push(d);
+                        }
+                    });
+                    this.importModal = false;
+                    commons._initsort_(this,self.import);
+                },
+                importDescOk:function(){
+                    if (!this.importDescValue) {
+                        toastr.error('导入内容为空');
+                        return false;
+                    }
+
+                    alert(this.content.responseArgs.toArray);
+                    var data = null;
+                    try {
+                        data = utils.toJSON(this.importDescValue)
                     } catch (e) {
                         alert('JSON格式有误');
                         return;
@@ -229,3 +266,4 @@
     });
 
 })();
+

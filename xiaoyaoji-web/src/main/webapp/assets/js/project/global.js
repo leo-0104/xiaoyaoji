@@ -167,6 +167,10 @@
                     this.importModal = true;
                     this.import = type;
                 },
+                importDesc:function(type){
+                    this.importDescModal = true;
+                    this.import = type;
+                },
                 importOk:function(){
                     if (!this.importValue) {
                         toastr.error('导入内容为空');
