@@ -120,6 +120,7 @@
                         t.type = 'string';
                     }
                     t.require = 'true';
+                    t.description = "";
                     temp.push(t);
                 }
             }

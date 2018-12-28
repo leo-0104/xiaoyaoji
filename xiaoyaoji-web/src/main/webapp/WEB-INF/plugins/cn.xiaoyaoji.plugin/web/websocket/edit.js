@@ -13,7 +13,11 @@
                 responseArgs:[],
                 import:null,
                 importValue:null,
+                importDescValue:null,
+                startDesc:null,
+                execDesc:null,
                 importModal:false,
+                importDescModal:false,
                 currentEnv:null,
                 urlArgs:[],
                 flag:{
@@ -165,6 +169,47 @@
                     });
                     this.importModal = false;
                     commons._initsort_();
+                },
+                importDescOk:function(){
+                    if (!this.importDescValue) {
+                        toastr.error('导入内容为空');
+                        return false;
+                    }
+                    if (!this.startDesc){
+                        toastr.error("开始参数名称为空");
+                        return false;
+                    }
+                    //剔除字段数组
+                    var execArr = new Array();
+                    if (this.execDesc != "" &&  this.execDesc != null){
+                        execArr = this.execDesc.trim().split(",");
+                    }
+                    //将导入的结构体封装成数组
+                    var descText = this.importDescValue.substring(this.importDescValue.indexOf("{") + 1,this.importDescValue.indexOf("}"));
+
+                    var descArr = descText.trim().split("\n");
+                    var resultArr = new Array();
+                    var start = 0;
+                    for (var index = 0;index < descArr.length;index++){
+                        //得到每一行文本
+                        var val = descArr[index];
+                        //根据空格进行切分,txtArr[3]表示结构体字段名称
+                        var txtArr = val.trim().split(/[ ]+/);
+                        //剔除字段数组不为空 且 本行结构体字段名称 在剔除字段数组中，则直接跳过
+                        if (execArr.length > 0  && execArr.indexOf(txtArr[3].trim().substring(0,txtArr[3].length - 1)) >= 0){
+                            continue;
+                        }
+                        if (val.lastIndexOf("/") < 0){
+                            resultArr[start++] = "";
+                        }else {
+                            resultArr[start++] = val.substring(val.lastIndexOf("/") + 1).trim();
+                        }
+                    }
+                    var start = 0;
+                    var flag = false;
+                    utils.setDesc(this.content.responseArgs,resultArr,start,flag,this.startDesc);
+                    this.importDescModal = false;
+                    // commons._initsort_(this,this.import);
                 },
                 loadAttach:function(){
                     var self = this;

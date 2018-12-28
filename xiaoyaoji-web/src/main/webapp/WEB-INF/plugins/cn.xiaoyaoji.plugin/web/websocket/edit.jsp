@@ -109,6 +109,9 @@
                             <button class="btn btn-default btn-sm" v-on:click="importJSON('responseArg')">
                                 <i class="iconfont icon-importexport"></i>导入json
                             </button>
+                            <button class="btn btn-default btn-sm" v-on:click="importDesc('responseArgs')">
+                                <i class="iconfont icon-importexport"></i>导入描述
+                            </button>
                         </div>
                     </div>
 
@@ -154,6 +157,29 @@
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <button class="btn btn-primary middle" v-on:click="importOk" tabindex="2">确定</button>
                     </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" v-cloak v-if="importDescModal">
+        <div class="modal-header">
+            <i class="iconfont icon-close modal-close" v-on:click="importDescModal=false"></i>
+        </div>
+        <div class="modal-content">
+            <div class="modal-layout1 form" style="width: 500px">
+                <p class="title">导入描述</p>
+                <textarea rows="15" class="k1 text" v-model="importDescValue" initial="off"
+                          v-bind:autofocus="importDescModal"
+                          tabindex="1" placeholder="请粘贴导入的结构体"></textarea>
+                开始参数名称： <input type="text" class="uk-input" v-model="startDesc" >
+                剔除结构体字段名称：<input type="text" class="uk-input" v-model="execDesc" >
+                <span>(多个字段名称之间用英文,隔开)</span>
+                <div class="ta-c actions">
+                    <button class="btn btn-default-box middle" tabindex="3" v-on:click="importDescModal=false">
+                        取消
+                    </button>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button class="btn btn-primary middle" v-on:click="importDescOk" tabindex="2">确定</button>
+                </div>
             </div>
         </div>
     </div>

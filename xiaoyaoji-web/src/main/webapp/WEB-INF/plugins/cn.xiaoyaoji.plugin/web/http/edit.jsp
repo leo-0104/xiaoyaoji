@@ -299,9 +299,8 @@
                 <textarea rows="15" class="k1 text" v-model="importDescValue" initial="off"
                           v-bind:autofocus="importDescModal"
                           tabindex="1" placeholder="请粘贴导入的结构体"></textarea>
-                开始参数名称： <input type="text" class="uk-input" v-model="startParams" >
-                结束参数名称：<input type="text" class="uk-input"  v-model="endParams" >
-                剔除结构体字段名称：<input type="text" class="uk-input" maxlength="30" v-model="execParams" >
+                开始参数名称： <input type="text" class="uk-input" v-model="startDesc" >
+                剔除结构体字段名称：<input type="text" class="uk-input" v-model="execDesc" >
                 <span>(多个字段名称之间用英文,隔开)</span>
                 <div class="ta-c actions">
                     <button class="btn btn-default-box middle" tabindex="3" v-on:click="importDescModal=false">

@@ -28,6 +28,20 @@
                 }
                 return data;
             },
+            setDesc:function(data,resultArr,start,flag,startDesc){
+                for (var index = 0;index < data.length && start < resultArr.length;index++){
+                    var obj = data[index];
+                    if (obj['name'].trim() == startDesc || flag == true){
+                         obj['description'] = resultArr[start];
+                         flag = true;
+                         start = start + 1 ;
+                    }
+                    if (obj['children'] != "" && start < resultArr.length){
+                        return this.setDesc(obj['children'],resultArr,start,flag,startDesc);
+                    }
+                }
+                return;
+            },
             ajax: function (params) {
                 var url = this.config.root + params.url;
                 params.url = x.ctx + url;
