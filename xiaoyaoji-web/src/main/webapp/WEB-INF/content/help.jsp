@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <title>在线帮助 - 小幺鸡</title>
+    <title>在线帮助 - 虎牙直播</title>
     <jsp:include page="/WEB-INF/includes/meta.jsp"/>
     <link rel="stylesheet" href="${assets}/css/index.css?v=${v}">
 </head>
@@ -23,7 +23,7 @@
     <div>
         <p>1.服务器提供<a href="http://baike.baidu.com/item/jsonp" target="_blank">JSONP</a> 支持</p>
         <p>2.服务器提供<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Access_control_CORS" target="_blank">CORS</a> 支持</p>
-        <p>3.下载由小幺鸡提供的Chrome浏览器插件。
+        <p>3.下载由虎牙直播提供的Chrome浏览器插件。
             <a href="https://chrome.google.com/webstore/detail/%E5%B0%8F%E5%B9%BA%E9%B8%A1/omohfhadnbkakganodaofplinheljnbd" target="_blank">chrome应用商店下载</a>
         </p>
     </div>

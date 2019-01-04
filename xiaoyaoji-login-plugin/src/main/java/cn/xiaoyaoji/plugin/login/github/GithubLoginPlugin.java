@@ -32,7 +32,7 @@ public class GithubLoginPlugin extends LoginPlugin {
         thirdparty.setType(getPluginInfo().getId());
         thirdparty.setEmail(user.getEmail());
         User loginUser = ServiceFactory.instance().loginByThirdparty(thirdparty);
-        AssertUtils.notNull(loginUser,"该账户暂未绑定小幺鸡账户,请绑定后使用");
+        AssertUtils.notNull(loginUser,"该账户暂未绑定虎牙直播账户,请绑定后使用");
         return loginUser;
     }
 

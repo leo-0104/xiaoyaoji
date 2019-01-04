@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-    <title>忘记密码 - 小幺鸡</title>
+    <title>忘记密码 - 虎牙直播</title>
     <jsp:include page="/WEB-INF/includes/meta.jsp"/>
     <link rel="stylesheet" href="${assets}/css/index.css?v=${v}">
 </head>

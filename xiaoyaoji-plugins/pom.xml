@@ -37,6 +37,18 @@
                     </execution>
                 </executions>
             </plugin>
+            <!--<plugin>-->
+                <!--<groupId>org.apache.maven.plugins</groupId>-->
+                <!--<artifactId>maven-war-plugin</artifactId>-->
+                <!--<configuration>-->
+                      <!--&lt;!&ndash;在打包时相关的类会被独立打成jar&ndash;&gt;-->
+                     <!--<attachClasses>true</attachClasses>-->
+                    <!--<classesClassifier>api</classesClassifier>-->
+                <!--</configuration>-->
+                <!--<version>2.1.7</version>-->
+                <!--<executions>-->
+                <!--</executions>-->
+            <!--</plugin>-->
         </plugins>
     </build>
 </project>

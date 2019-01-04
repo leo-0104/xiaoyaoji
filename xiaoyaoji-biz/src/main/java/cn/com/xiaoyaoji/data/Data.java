@@ -63,6 +63,8 @@ public interface Data {
 
     int findPassword(String id, String email, String password);
 
+    int updatePassword(String email, String password);
+
     boolean checkUserHasProjectEditPermission(String userId, String projectId);
 
     void initUserThirdlyBinds(User user);

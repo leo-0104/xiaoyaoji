@@ -35,7 +35,7 @@ public class WeiboLoginPlugin extends LoginPlugin {
         thirdparty.setNickName(weiboUser.getScreen_name());
         thirdparty.setType(getPluginInfo().getId());
         User user = ServiceFactory.instance().loginByThirdparty(thirdparty);
-        AssertUtils.notNull(user,"该账户暂未绑定小幺鸡账户,请绑定后使用");
+        AssertUtils.notNull(user,"该账户暂未绑定虎牙直播账户,请绑定后使用");
         return user;
     }
 

@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html lang="zh-Hans">
 <head>
-    <title>小幺鸡，简单好用的接口文档管理工具</title>
+    <title>简单好用的接口文档管理工具</title>
     <jsp:include page="/WEB-INF/includes/meta.jsp"/>
     <link rel="stylesheet" href="${assets}/css/index.css?v=${v}">
 </head>
@@ -16,7 +16,7 @@
 <div id="app">
 <jsp:include page="/WEB-INF/includes/header.jsp"/>
 <section class="m-sec1">
-    <div class="m-sec1-desc ta-c">小幺鸡，简单好用的在线接口文档管理工具</div>
+    <div class="m-sec1-desc ta-c">简单好用的在线接口文档管理工具</div>
     <div class="ta-c m-sec1-go"><a href="dashboard?v=${v}">立即使用</a></div>
 </section>
 <section class="m-sec2 cb mc">
@@ -39,7 +39,7 @@
 </section>
 <section class="m-sec3 ta-c">
     <div class="about-desc">
-        <p>如果你喜欢下面这些，那你一定会喜欢上“小幺鸡”</p>
+        <%--<p>如果你喜欢下面这些，那你一定会喜欢上“虎牙直播”</p>--%>
         <div class="about-list mc">
             <p><i class="iconfont icon-yes"></i>接口在线测试，降低接口错误率</p>
             <p><i class="iconfont icon-yes"></i>开放源码，支持任意修改</p>
@@ -50,26 +50,26 @@
         </div>
     </div>
 </section>
-<section class="m-sec-contact">
-    <ul class="cb mc">
-        <li>
-            <p><i class="iconfont icon-qqqun"></i></p>
-            <p>群:<a href="//shang.qq.com/wpa/qunwpa?idkey=3ef7d12c9bd722026c6a61318335246216421cd6a6851b0e8e3916dac297b3e7">336075459</a> </p>
-        </li>
-        <li>
-            <p><i class="iconfont icon-weibo"></i></p>
-            <p><a href="http://weibo.com/2727734575" target="_blank">iAm凉粉</a> </p>
-        </li>
-        <li>
-            <p><i class="iconfont icon-email"></i></p>
-            <p><a href="mailto:xiaoyaoji@zhoujingjie.cn">xiaoyaoji@zhoujingjie.cn</a> </p>
-        </li>
+<%--<section class="m-sec-contact">--%>
+    <%--<ul class="cb mc">--%>
+        <%--<li>--%>
+            <%--<p><i class="iconfont icon-qqqun"></i></p>--%>
+            <%--<p>群:<a href="//shang.qq.com/wpa/qunwpa?idkey=3ef7d12c9bd722026c6a61318335246216421cd6a6851b0e8e3916dac297b3e7">336075459</a> </p>--%>
+        <%--</li>--%>
+        <%--<li>--%>
+            <%--<p><i class="iconfont icon-weibo"></i></p>--%>
+            <%--<p><a href="http://weibo.com/2727734575" target="_blank">iAm凉粉</a> </p>--%>
+        <%--</li>--%>
+        <%--<li>--%>
+            <%--<p><i class="iconfont icon-email"></i></p>--%>
+            <%--<p><a href="mailto:xiaoyaoji@zhoujingjie.cn">xiaoyaoji@zhoujingjie.cn</a> </p>--%>
+        <%--</li>--%>
 
-    </ul>
-</section>
+    <%--</ul>--%>
+<%--</section>--%>
 </div>
 <br/>
-<jsp:include page="/WEB-INF/includes/footer.jsp"/>
+<%--<jsp:include page="/WEB-INF/includes/footer.jsp"/>--%>
 
 </body>
 </html>

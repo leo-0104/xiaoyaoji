@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <title>注册 - 小幺鸡</title>
+    <title>注册 - 虎牙直播</title>
     <jsp:include page="/WEB-INF/includes/meta.jsp">
         <jsp:param name="ignore" value="true"/>
     </jsp:include>

@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <title>小幺鸡</title>
+    <title>虎牙直播</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="${assets}/css/style.css?v=${v}">
     <link rel="stylesheet" href="${assets}/css/home.css?v=${v}">
@@ -28,8 +28,8 @@
                 <li class="uk-nav-divider"></li>
                 <li><a href="${ctx}/profile">个人中心</a></li>
                 <li><a href="${ctx}/profile/security">安全设置</a></li>
-                <li><a href="${ctx}/help">帮助中心</a></li>
-                <li><a href="${ctx}/donate" target="_blank">请作者喝咖啡</a></li>
+                <%--<li><a href="${ctx}/help">帮助中心</a></li>--%>
+                <%--<li><a href="${ctx}/donate" target="_blank">请作者喝咖啡</a></li>--%>
                 <li class="uk-nav-divider"></li>
                 <li><a href="${ctx}/logout">退出登录</a></li>
             </ul>

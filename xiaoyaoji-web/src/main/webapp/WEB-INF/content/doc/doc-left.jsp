@@ -188,9 +188,9 @@
 
 
 
-    <div class="dl-placehoder" v-cloak>
-        本文档由<a href="http://www.xiaoyaoji.cn" target="_blank">小幺鸡</a>编辑
-    </div>
+    <%--<div class="dl-placehoder" v-cloak>--%>
+        <%--本文档由<a href="http://www.xiaoyaoji.cn" target="_blank">虎牙直播</a>编辑--%>
+    <%--</div>--%>
 </div>
 <script>window._projectId_ = '${project.id}';
 window._edit_ = '${edit}'</script>

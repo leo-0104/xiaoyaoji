@@ -26,7 +26,7 @@ public class DefaultEMailProvider implements EmailProvider {
             authentication(email);
             email.setFrom(from);
             email.setCharset("UTF-8");
-            email.setSubject("小幺鸡验证码");
+            email.setSubject("虎牙直播验证码");
             email.setMsg("验证码是：" + code);
             email.addTo(to);
             email.send();

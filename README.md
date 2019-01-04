@@ -1,5 +1,5 @@
 ![LOGO](http://www.xiaoyaoji.cn/assets/img/logo/full.png)
-# 小幺鸡文档管理工具，支持富文本、markdown、http、websocket 及其在线测试
+# 虎牙直播文档管理工具，支持富文本、markdown、http、websocket 及其在线测试
 ## [在线演示地址demo](http://www.xiaoyaoji.cn/project/demo)
 
 ### [下载最新版本](https://github.com/zhoujingjie/xiaoyaoji/releases)
@@ -12,8 +12,8 @@
 
 
 ## module说明
-* xiaoyaoji-web : 小幺鸡web工程
-* xiaoyaoji-biz : 小幺鸡业务代码模块
+* xiaoyaoji-web : 虎牙直播web工程
+* xiaoyaoji-biz : 虎牙直播业务代码模块
 * 其他： 插件目录
 
 

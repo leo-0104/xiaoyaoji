@@ -46,7 +46,7 @@ public class PdfExportTest {
 
     private void getRootTile(Document document) throws DocumentException {
 
-        RootTitle title = new RootTitle(document, "小幺鸡使用说明");
+        RootTitle title = new RootTitle(document, "虎牙直播使用说明");
         document.add(title);
     }
 

@@ -15,7 +15,7 @@
         <div>
             <div class="db-relation cb">
                 <h1>关联账户</h1><br/>
-                <p class="db-rel-desc">通过关联账户的绑定，您可以使用相关的授权账号登录小幺鸡服务。您也可以通过这些社会化服务，<br/>及时获取小幺鸡服务的信息。</p>
+                <p class="db-rel-desc">通过关联账户的绑定，您可以使用相关的授权账号登录虎牙直播服务。您也可以通过这些社会化服务，<br/>及时获取虎牙直播服务的信息。</p>
                 <ul style="padding: 0;margin: 0">
                     <c:forEach items="${loginPlugins}" var="item">
                     <li class="ta-c">

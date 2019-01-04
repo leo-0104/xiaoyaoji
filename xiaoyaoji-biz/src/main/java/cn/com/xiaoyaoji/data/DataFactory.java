@@ -680,6 +680,18 @@ public class DataFactory implements Data {
     }
 
     @Override
+    public int updatePassword( final String email, final String newPassword) {
+        return process(new Handler<Integer>() {
+            @Override
+            public Integer handle(Connection connection, QueryRunner qr) throws SQLException {
+                String sql = new StringBuilder("update ").append(TableNames.USER).append(" set password=? where email=?").toString();
+                int rs = qr.update(connection, sql, newPassword, email);
+                return rs;
+            }
+        });
+    }
+
+    @Override
     public boolean checkUserHasProjectEditPermission(final String userId, final String projectId) {
         return process(new Handler<Boolean>() {
             @Override

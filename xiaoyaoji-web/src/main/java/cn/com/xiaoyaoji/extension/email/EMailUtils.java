@@ -25,7 +25,7 @@ public class EMailUtils {
     }
 
     public static void findPassword(String id, String to) {
-        String findpasswordURL = ConfigUtils.getProperty("xyj.findpassword.url");
+        String findpasswordURL = ConfigUtils.getProperty("huya.findpassword.url");
         String findPageURL = findpasswordURL+"?token=" + Base64.encodeBase64String((id + "!" + to).getBytes());
         provider.findPassword(findPageURL,to);
     }

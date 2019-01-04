@@ -10,13 +10,13 @@
     <div class="project-info-content" id="content">
         <div class="db-security form">
             <h3 class="title">安全设置</h3><br/><br/>
-            <div class="item">
-                <div class="col-sm-2">更换邮箱</div>
-                <div class="col-sm-6">{{user.email}}</div>
-                <div class="col-sm-2">
-                    <button type="button" class="uk-button uk-button-primary" uk-toggle="target:#emailModal" >修改</button>
-                </div>
-            </div>
+            <%--<div class="item">--%>
+                <%--<div class="col-sm-2">更换邮箱</div>--%>
+                <%--<div class="col-sm-6">{{user.email}}</div>--%>
+                <%--<div class="col-sm-2">--%>
+                    <%--<button type="button" class="uk-button uk-button-primary" uk-toggle="target:#emailModal" >修改</button>--%>
+                <%--</div>--%>
+            <%--</div>--%>
             <div class="item">
                 <div class="col-sm-2">更换密码</div>
                 <div class="col-sm-6">建议您3个月修改一次</div>
@@ -34,13 +34,13 @@
                 </div>
 
                 <div class="uk-modal-body form">
-                    <div class="item">
-                        <div class="col-sm-12">
-                            <input type="text" name="email" v-model="email" tabindex="1" maxlength="45"
-                                   v-validate="'required|email'" class="k1 text" placeholder="请输入新的邮箱"/>
-                            <p class="tip" >{{ errors.first('email') }}</p>
-                        </div>
-                    </div>
+                    <%--<div class="item">--%>
+                        <%--<div class="col-sm-12">--%>
+                            <%--<input type="text" name="email" v-model="email" tabindex="1" maxlength="45"--%>
+                                   <%--v-validate="'required|email'" class="k1 text" placeholder="请输入新的邮箱"/>--%>
+                            <%--<p class="tip" >{{ errors.first('email') }}</p>--%>
+                        <%--</div>--%>
+                    <%--</div>--%>
 
                     <div class="item">
                         <div class="col-sm-8">

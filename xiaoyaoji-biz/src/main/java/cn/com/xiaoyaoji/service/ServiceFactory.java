@@ -194,6 +194,10 @@ public class ServiceFactory {
         return DataFactory.instance().findPassword(id, email, password);
     }
 
+    public int updatePassword(String email, String password) {
+        return DataFactory.instance().updatePassword(email, password);
+    }
+
     public boolean checkUserHasProjectEditPermission(String userId, String projectId) {
         return DataFactory.instance().checkUserHasProjectEditPermission(userId, projectId);
     }

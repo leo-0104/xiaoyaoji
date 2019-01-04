@@ -344,7 +344,7 @@
             </div>
             <%--<div class="ta-c api-plugin-tip" v-if="!extVer">
                 <i class="iconfont icon-chrome"></i><br/>
-                <p>由于浏览器有跨域限制，如果您的服务器不支持CORS协议，需要安装我们开发的Chrome插件“小幺鸡”</p>
+                <p>由于浏览器有跨域限制，如果您的服务器不支持CORS协议，需要安装我们开发的Chrome插件“虎牙直播”</p>
                 <p>安装的时候请注意勾选，安装后请刷新页面。</p>
                 <p>
                     <a href="https://chrome.google.com/webstore/detail/%E5%B0%8F%E5%B9%BA%E9%B8%A1/omohfhadnbkakganodaofplinheljnbd" target="_blank" class="btn btn-default">Chrome应用商店</a>
@@ -353,7 +353,7 @@
             <div v-else>
                 <div class="ta-c api-plugin-tip" v-if="extVer < 1.3">
                     <i class="iconfont icon-chrome"></i><br/>
-                    <p>您安装的『小幺鸡』插件版本有更新,为了避免使用出现bug,请下载升级</p>
+                    <p>您安装的『虎牙直播』插件版本有更新,为了避免使用出现bug,请下载升级</p>
                     <p>安装的时候请注意勾选，安装后请刷新页面。</p>
                     <p>
                         <a href="https://chrome.google.com/webstore/detail/%E5%B0%8F%E5%B9%BA%E9%B8%A1/omohfhadnbkakganodaofplinheljnbd" target="_blank" class="btn btn-default">Chrome应用商店</a>

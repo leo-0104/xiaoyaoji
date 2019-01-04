@@ -12,7 +12,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <title>登录 - 小幺鸡</title>
+    <title>登录 - 虎牙直播</title>
     <jsp:include page="/WEB-INF/includes/meta.jsp"/>
     <link rel="stylesheet" href="${assets}/css/index.css?v=${v}">
 </head>
@@ -36,7 +36,7 @@
         </div>
         <div class="item">
             <div class="col-sm-8">
-                <a href="forget">忘记密码</a>
+                <a href="findpassword">忘记密码</a>
                 <a href="register">免费注册</a>
             </div>
             <div class="col-sm-4">

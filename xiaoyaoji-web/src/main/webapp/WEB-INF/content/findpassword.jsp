@@ -8,16 +8,20 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <title>找回密码 - 小幺鸡</title>
+    <title>找回密码 - 虎牙直播</title>
     <jsp:include page="/WEB-INF/includes/meta.jsp"/>
     <link rel="stylesheet" href="${assets}/css/index.css?v=${v}">
 </head>
 <body>
 <div id="app">
-    <div class="login-form mc" v-cloak v-if="!!id">
+    <div class="login-form mc" >
         <form class="form" v-on:submit.prevent>
             <div class="ta-c logo"><a href="${ctx}/"><img src="${assets}/img/logo/full.png"></a></div>
-            <div class="item">{{email}}</div>
+            <div class="item">
+                <input type="text" autofocus="autofocus" name="email" v-model="email" v-validate="'required|email'"
+                       class="text" placeholder="请输入注册邮箱"/>
+                <p class="tip">{{errors.first('email')}}</p>
+            </div>
             <div class="item">
                 <input type="password" name="password" class="text" tabindex="2" v-model="password"
                        v-validate="'required'" initial="off" placeholder="请输入新密码"/>

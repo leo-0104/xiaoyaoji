@@ -144,13 +144,13 @@ public class UserController {
      */
     @Ignore
     @PostMapping("newpassword")
-    public Object newPassword(@RequestParam String email, @RequestParam String id, @RequestParam String password) {
+    public Object newPassword(@RequestParam String email, @RequestParam String password) {
         AssertUtils.notNull(email, "邮箱为空");
-        AssertUtils.notNull(id, "无效请求");
         AssertUtils.notNull(password, "密码为空");
         AssertUtils.isTrue(StringUtils.isEmail(email), "邮箱格式错误");
+        AssertUtils.isTrue(ServiceFactory.instance().checkEmailExists(email), "邮箱不存在");
         password = PasswordUtils.password(password);
-        int rs = ServiceFactory.instance().findPassword(id, email, password);
+        int rs = ServiceFactory.instance().updatePassword(email, password);
         AssertUtils.isTrue(rs > 0, "操作失败");
         return 1;
     }
